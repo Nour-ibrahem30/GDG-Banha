@@ -1,0 +1,265 @@
+/* start global rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root{
+    --Color-Text:white;
+    --transition:0.5s;
+    --padding-top:60px;
+    --padding-bottom:60px;
+    --paragraph-color:#777;
+}
+body{
+    font-family: "Cairo", sans-serif;
+    background-color: black;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* small */
+@media(min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+/* medium */
+@media(min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+/* large */
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+/* End global rules */
+/* start Head */
+.Head{
+    background-image: url(./Imges/Img-One.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 70vh;
+}
+.Head .list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-size: 18px;
+}
+.Head a{
+    text-decoration: none;
+    color: var(--Color-Text);
+}
+.Head ul{
+    display: flex;
+}
+.Head ul li{
+    margin-right: 20px;
+    color: var(--Color-Text);
+    position: relative;
+}
+.Head ul a li::before{
+    content: '';
+    width: 0;
+    position: absolute;
+    height: 3px;
+    background-color: white;
+    bottom: -8px;
+    transition: var(--transition);
+}
+.Head ul li:hover::before{
+    width: 100%;
+}
+.Head .text{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 165px;
+    color: var(--Color-Text);
+}
+/* End Head */
+/* Start Section */
+.Section{
+    display: flex;
+    gap: 100px;
+}
+.Section .parent{
+    background-color: rgb(249 228 227);
+    padding: 15px;
+    width: 800px;
+}
+.Section .parent .F-One{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+.Section .parent .F-One.imgs img{
+    height: 200px;
+}
+.Section .parent .F-One  h2{
+    color: rgb(227 44 137);
+    position: relative;
+}
+.Section .parent .F-One  h2::before{
+    content: '';
+    position: absolute;
+    width: 47%;
+    height: 2px;
+    background-color: rgb(227 44 137);
+    bottom: -1px;
+    right: 48px;
+}
+.Section .parent .F-One .Text .Price p{
+    color: rgb(227 44 137);
+    font-weight: bold;
+}
+button{
+    width: 165px;
+    height: 45px;
+    padding: 5px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(227 44 137);
+    color: white;
+    position: relative;
+    font-weight: bold;
+}
+button::before{
+    content: "\f290";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+}
+.Section .Parent-Two{
+    text-align: center;
+    width: 600px;
+}
+.Section .Parent-Two .Text h2{
+    color: white;
+}
+.Section .Parent-Two .Text p{
+    color: var(--paragraph-color);
+}
+.Section .Parent-Two p{
+    color: rgb(227 44 137);
+    font-size: 18px;
+}
+.Section .Parent-Two .icons i{
+    margin-right: 35px;
+    font-size: 20px;
+    color: white;
+}
+.Section .Parent-Two .icons i:nth-child(3){
+    color: rgb(227 44 137);
+}
+/* End Section */
+/* Start Gallery */
+.Gallery{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
+.Gallery h2{
+    margin-left: 20px;
+    color: white;
+}
+.Gallery .container .Parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+    text-align: center;
+    justify-content: center;
+}
+.Gallery .container .Parent .Price{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.Gallery .container .Parent .Imgs{
+    position: relative;
+    border-radius: 50px;
+}
+.Gallery .container .Parent .Imgs::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    z-index: 2;
+    transition: var(--transition);
+    background-color: black ;
+    border-radius: 50px;
+}
+.Gallery .container .Parent .Imgs:hover.Imgs::before{
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iste ducimus!';
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: white;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+}
+.Gallery .container .Parent .Price p{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.Gallery .container .Parent .Price p:nth-child(2){
+    opacity: 0.4;
+}
+.Gallery .container .Parent img{
+    height:450px;
+    border-radius: 50px;
+}
+/* End Gallery */
+/* STart footer */
+footer{
+    padding-top: var(--padding-top);
+}
+footer .Imgs img{
+    width: 100%;
+}
+footer .Links{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 130px;
+    padding: 20px;
+}
+footer .Links p{
+    color: white;
+}
+footer .Links ul li{
+    margin-top: 15px;
+    color: var(--paragraph-color);
+}
+footer .Icons{
+    text-align: center;
+    color: white;
+    margin-left: 5px;
+    padding-bottom: 25px;
+    margin-top: 10px;
+}
+footer .Icons i{
+    margin-left: 15px;
+    font-size: 18px;
+}
+/* End footer */
