@@ -262,4 +262,12 @@ footer .Icons i{
     margin-left: 15px;
     font-size: 18px;
 }
+footer .Copy-Right{
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+footer .Copy-Right > span{
+    color: cyan;
+}
 /* End footer */
